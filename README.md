@@ -17,7 +17,7 @@ yarn add @react-native-masked-view/masked-view react-native-svg
 
 To create a GradiendText add GradientText to your page and change the settings to your liking
 
-```react
+```js
 import GradientText from 'components/GradientText';
 
 export default function App() {
