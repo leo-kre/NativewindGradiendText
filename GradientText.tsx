@@ -1,4 +1,3 @@
-// components/GradientText.tsx
 import React, { useState } from 'react';
 import { View, Text, LayoutChangeEvent } from 'react-native';
 import MaskedView from '@react-native-masked-view/masked-view';
@@ -15,7 +14,6 @@ type Theme = {
 };
 
 const THEMES: Record<string, Theme> = {
-  // weiche, wolkige Standardfarbmischung, leicht nach rechts verschoben
   default: {
     stops: [
       { offset: '0%', color: '#ff7ac4' },
@@ -129,7 +127,7 @@ export type GradientTextProps = {
   textClassName?: string;
   gradientColor?: string;
   numberOfLines?: number;
-  containerClassName?: string; // optional: z.B. w-11/12
+  containerClassName?: string;
 };
 
 export default function GradientText({
@@ -142,7 +140,6 @@ export default function GradientText({
   const [size, setSize] = useState<{ w: number; h: number } | null>(null);
   const theme = pickTheme(gradientColor);
 
-  // Messung der exakten Textbox (inkl. Baseline/lineHeight)
   const onMeasure = (e: LayoutChangeEvent) => {
     const { width, height } = e.nativeEvent.layout;
     setSize({ w: width, h: height });
@@ -150,8 +147,6 @@ export default function GradientText({
 
   return (
     <View className={containerClassName} style={{ alignSelf: 'flex-start' }}>
-      {/* Dieser Text bestimmt Layout, Baseline und Linksbündigkeit.
-          KEIN absolute → keine Überlagerung mit anderen Geschwistern. */}
       <Text
         className={textClassName}
         style={{ opacity: 0, includeFontPadding: false }}
@@ -159,9 +154,7 @@ export default function GradientText({
         onLayout={onMeasure}>
         {text}
       </Text>
-
-      {/* Overlay exakt über dieselbe Box, aber innerhalb des lokalen Wrappers,
-          dadurch kein Überdecken von "Welcome"/"to" weiter oben. */}
+      
       {size && (
         <View
           style={{
