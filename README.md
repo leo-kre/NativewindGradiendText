@@ -23,8 +23,8 @@ import GradientText from 'components/GradientText';
 export default function App() {
   <GradientText
             text="Text"
-            textClassName="text-[12rem] font-bold text-justify text-center"
-            containerClassName="h-[190px] mt-[-25px] w-full"
+            textClassName="text-9xl font-bold"
+            containerClassName="bg-white"
             gradientColor="default">
 </GradientText>
 }
