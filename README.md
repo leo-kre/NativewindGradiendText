@@ -2,6 +2,8 @@
 
 Easily generate gradiend texts in nativewind.
 
+<img width="441" height="899" alt="image" src="https://github.com/user-attachments/assets/94daf7af-41fa-4dce-a7c8-9fa410c9df3f" />
+
 ## Install the required packages
 
 Before using the gradiend text component you need to install the required packages using npm or yarn
