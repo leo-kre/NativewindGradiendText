@@ -31,8 +31,11 @@ export default function App() {
 ```
 
 ``` text ``` Sets the text
+
 ``` textClassName ``` Sets the styling of the text using nativewind
+
 ``` containerClassName ``` Sets the styling of the <Text> container
+
 ``` gradientColor ``` Sets the color of the gradient according to the configuration
 
 GradiendText supports the following colors: default, purple, teal, blue, red, green, orange
