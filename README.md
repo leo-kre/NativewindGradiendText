@@ -7,7 +7,7 @@ Easily generate gradiend texts in nativewind.
 
 ## Install the required packages
 
-Before using the gradiend text component you need to install the required packages using npm or yarn
+Before using the GradientText component you need to install the required packages using npm or yarn
 
 ```bash
 npm install @react-native-masked-view/masked-view react-native-svg
